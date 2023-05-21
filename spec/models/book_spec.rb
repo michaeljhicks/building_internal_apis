@@ -9,4 +9,8 @@ RSpec.describe Book, type: :model do
     it { should validate_presence_of :popularity }
     it { should validate_numericality_of :number_sold }
   end
+
+  describe 'relationships' do 
+    it { should belongs_to :author }
+  end 
 end

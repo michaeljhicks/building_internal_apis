@@ -4,7 +4,7 @@ RSpec.describe 'Books API' do
   it 'sends a list of books' do 
     create_list(:book, 3)
 
-    get '/api/v1/books'
+    get "/api/v1/author/#{author.id}/books"
 
     expect(response).to be_successful
 
@@ -36,7 +36,7 @@ RSpec.describe 'Books API' do
   it 'can get one book by its id' do 
     id = create(:book).id
     
-    get "/api/v1/books/#{id}"
+    get "/api/v1/author/#{author.id}/books/#{id}"
     
     book = JSON.parse(response.body, symbolize_names: true)
     

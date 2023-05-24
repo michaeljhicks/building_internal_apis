@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
   # model validations
-  validates :title, :genre, :summary, :popularity, presence: true
+  validates :title, :genre, :summary, presence: true
   validates :number_sold, presence: true, numericality: true
 
   # model relationships

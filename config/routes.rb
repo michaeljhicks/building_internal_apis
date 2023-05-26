@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     end 
     
     namespace :v2 do 
-      resources :authors do 
+      resources :authors, only: %i[index show] do 
         resources :books, only: %i[index]
       end 
     end 

@@ -13,4 +13,5 @@ RSpec.describe Book, type: :model do
   describe 'relationships' do 
     it { should belongs_to :author }
   end 
+
 end
